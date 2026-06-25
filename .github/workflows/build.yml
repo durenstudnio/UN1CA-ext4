@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [a52sxq, a53x, a73xq, b0q, g0q, m52xq, o1s, p3s, r0q, r9s, t2s]
+        target: [a52sxq]
 
     steps:
       - name: Set Swap Space
@@ -104,7 +104,7 @@ jobs:
         continue-on-error: true
         env:
           BUZZ_TOKEN: ${{ secrets.BUZZHEAVIER_TOKEN }}
-          TARGET_DIR_ID: "a91kcrtt3d2t"
+          TARGET_DIR_ID: "LOLEK"
         run: |
           ZIP_NAME="${{ steps.get_filename.outputs.zip_name }}"
           echo "Uploading $ZIP_NAME to BuzzHeavier..."
